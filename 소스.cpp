@@ -31,7 +31,7 @@ int main(void)
 		full[i] = 'o';
 	char h[10] = { ' ',' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ' };
 
-	cout<<"Ãß¸®°ÔÀÓÀ» ½ÃÀÛÇÕ´Ï´Ù.\n\n";
+	cout<<"ì¶”ë¦¬ê²Œìž„ì„ ì‹œìž‘í•©ë‹ˆë‹¤.\n\n";
 	explain();
 	level();
 	while (1) {
@@ -56,7 +56,7 @@ int main(void)
 
 	fp = fopen("boss.txt", "r");
 	if (fp == NULL) {
-		fprintf(stderr, "¿øº» ÆÄÀÏ boss.txt¸¦ ¿­ ¼ö ¾ø½À´Ï´Ù.");
+		fprintf(stderr, "ì›ë³¸ íŒŒì¼ boss.txtë¥¼ ì—´ ìˆ˜ ì—†ìŠµë‹ˆë‹¤.");
 		exit(1);
 	}
 	while ((c = fgetc(fp)) != EOF)
@@ -70,11 +70,11 @@ int main(void)
 
 inline void explain(void)
 {
-	cout<<"\n°ÔÀÓ ¹æ¹ý: \n";
-	cout << "¿ì¸®Á¶ÀÇ ÇÁ·Î±×·¥Àº levelº°·Î ³ª´©¾îÁ® ÀÖ½À´Ï´Ù.\n";
-	cout << "LevelÀº ÃÑ 10¹®Á¦·Î ±¸¼ºµÇ¾îÀÖ½À´Ï´Ù.\n";
-	cout << "10¹®Á¦¸¦ ¸ðµÎ ´Ù Ç®°Ô µÉ °æ¿ì Boss¹®Á¦°¡ ³ª¿É´Ï´Ù.\n";
-	cout << "Boss¹®Á¦±îÁö ¸ÂÃß¾úÀ» ¶§ ¾î¶² ÀÏÀÌ ÀÏ¾î³¯ Áö Á÷Á¢ È®ÀÎÇØº¸¼¼¿ä.(´Ü 10¹øÀº ¹«Á¶°Ç ¸¶Áö¸·¿¡ Ç®¾î¾ßÇÕ´Ï´Ù.)\n";
+	cout<<"\nê²Œìž„ ë°©ë²•: \n";
+	cout << "ìš°ë¦¬ì¡°ì˜ í”„ë¡œê·¸ëž¨ì€ levelë³„ë¡œ ë‚˜ëˆ„ì–´ì ¸ ìžˆìŠµë‹ˆë‹¤.\n";
+	cout << "Levelì€ ì´ 10ë¬¸ì œë¡œ êµ¬ì„±ë˜ì–´ìžˆìŠµë‹ˆë‹¤.\n";
+	cout << "10ë¬¸ì œë¥¼ ëª¨ë‘ ë‹¤ í’€ê²Œ ë  ê²½ìš° Bossë¬¸ì œê°€ ë‚˜ì˜µë‹ˆë‹¤.\n";
+	cout << "Bossë¬¸ì œê¹Œì§€ ë§žì¶”ì—ˆì„ ë•Œ ì–´ë–¤ ì¼ì´ ì¼ì–´ë‚  ì§€ ì§ì ‘ í™•ì¸í•´ë³´ì„¸ìš”.(ë‹¨ 10ë²ˆì€ ë¬´ì¡°ê±´ ë§ˆì§€ë§‰ì— í’€ì–´ì•¼í•©ë‹ˆë‹¤.)\n";
 }
 
 inline void level(void)
@@ -102,12 +102,12 @@ inline int choice(void)
 
 	while (1)
 	{
-		cout << "µµÀüÇÒ LevelÀ» ÀÔ·ÂÇÏ¼¼¿ä: ";
+		cout << "ë„ì „í•  Levelì„ ìž…ë ¥í•˜ì„¸ìš”: ";
 		cin >> num;
 		getchar();
 		if (num < 1 || num>10)
 		{
-			cout << "1~10 »çÀÌÀÇ ¼ýÀÚ¸¸ ÀÔ·ÂÇÏ¼¼¿ä\n";
+			cout << "1~10 ì‚¬ì´ì˜ ìˆ«ìžë§Œ ìž…ë ¥í•˜ì„¸ìš”\n";
 			continue;
 		}
 		else
@@ -122,7 +122,7 @@ inline void Level1(void)
 	int num, count = 0;
 	
 
-	cout << "\n\n¹°À½Ç¥¿¡ µé¾î°¥ ¼ýÀÚ´Â?\n";
+	cout << "\n\në¬¼ìŒí‘œì— ë“¤ì–´ê°ˆ ìˆ«ìžëŠ”?\n";
 	cout<<"3+4=7\n";
 	cout << "7+5=12\n";
 	cout << "6+9=3\n";
@@ -130,13 +130,13 @@ inline void Level1(void)
 	cout << "8+9=?\n";
 
 	while (1) {
-		cout << "´ä: ";
+		cout << "ë‹µ: ";
 		cin>>num;
 		getchar();
 		count++;
 		if (count >= 3) {
-			cout << "ÈùÆ®:  ";
-			ifstream r("1¹øÈùÆ®.txt", ios_base::out);
+			cout << "ížŒíŠ¸:  ";
+			ifstream r("1ë²ˆížŒíŠ¸.txt", ios_base::out);
 
 			if (r.is_open() == true)
 			{
@@ -148,11 +148,11 @@ inline void Level1(void)
 		}
 
 		if (num == 5) {
-			cout << "Á¤´äÀÔ´Ï´Ù.!!\n\n";
+			cout << "ì •ë‹µìž…ë‹ˆë‹¤.!!\n\n";
 			break;
 		}
 		else {
-			cout << "´Ù½Ã ÀÔ·ÂÇÏ¼¼¿ä!!\n\n";
+			cout << "ë‹¤ì‹œ ìž…ë ¥í•˜ì„¸ìš”!!\n\n";
 		}
 	}
 
@@ -162,17 +162,17 @@ void Level2(void)
 {
 	int count = 0;
 	char c1[50];
-	cout << "\n\n´ÙÀ½¿¡ ¿Ã ¾ËÆÄºªÀº ¹«¾ùÀÎ°¡?\n";
+	cout << "\n\në‹¤ìŒì— ì˜¬ ì•ŒíŒŒë²³ì€ ë¬´ì—‡ì¸ê°€?\n";
 	cout << "N W H O I ( )\n";
 
 	while (1) {
-		cout << "´ä: ";
+		cout << "ë‹µ: ";
 		cin >> c1;
 		getchar();
 		count++;
 		if (count >= 3) {
-			cout << "ÈùÆ®:  ";
-			ifstream r("2¹øÈùÆ®.txt", ios_base::out);
+			cout << "ížŒíŠ¸:  ";
+			ifstream r("2ë²ˆížŒíŠ¸.txt", ios_base::out);
 
 			if (r.is_open()==true) 
 			{
@@ -184,11 +184,11 @@ void Level2(void)
 		}
 
 		if (c1[0] == 'i' || c1[0] == 'I') {
-			cout << "Á¤´äÀÔ´Ï´Ù.!!\n\n";
+			cout << "ì •ë‹µìž…ë‹ˆë‹¤.!!\n\n";
 			break;
 		}
 		else
-			cout << "´Ù½Ã ÀÔ·ÂÇÏ¼¼¿ä!!\n\n";
+			cout << "ë‹¤ì‹œ ìž…ë ¥í•˜ì„¸ìš”!!\n\n";
 
 	}
 }
@@ -197,18 +197,18 @@ void Level3(void)
 {
 	int count = 0;
 	int num1;
-	cout<<"c8¹Ý °¨¿Á¿¡ °¤Èù µÎ¿¬ÀÌ´Â °¨¿ÁÀ» Å»ÃâÇÏ±â À§ÇØ\n";
-	cout<<"¾ÏÈ£¸¦ ¾Ë¾Æ³»¾ß ÇÑ´Ù. ¾ÏÈ£´Â ¹«¾ùÀÏ±î?\n";
+	cout<<"c8ë°˜ ê°ì˜¥ì— ê°‡ížŒ ë‘ì—°ì´ëŠ” ê°ì˜¥ì„ íƒˆì¶œí•˜ê¸° ìœ„í•´\n";
+	cout<<"ì•”í˜¸ë¥¼ ì•Œì•„ë‚´ì•¼ í•œë‹¤. ì•”í˜¸ëŠ” ë¬´ì—‡ì¼ê¹Œ?\n";
 	cout << "2 1 1 1 1 2 1 3 2 2 2 1 1\n";
 	cout << "1 1 1 1 1 2 1 1 2 ? 2 2 1\n";
 	while (1) {
-		cout << "´ä: ";
+		cout << "ë‹µ: ";
 		cin>>num1;
 		getchar();
 		count++;
 		if (count >= 3) {
-			cout << "ÈùÆ®:  ";
-			ifstream r("3¹øÈùÆ®.txt", ios_base::out);
+			cout << "ížŒíŠ¸:  ";
+			ifstream r("3ë²ˆížŒíŠ¸.txt", ios_base::out);
 
 			if (r.is_open() == true)
 			{
@@ -220,11 +220,11 @@ void Level3(void)
 		}
 
 		if (num1 == 3) {
-			cout<<"Á¤´äÀÔ´Ï´Ù.!!\n\n";
+			cout<<"ì •ë‹µìž…ë‹ˆë‹¤.!!\n\n";
 			break;
 		}
 		else {
-			cout << "´Ù½Ã ÀÔ·ÂÇÏ¼¼¿ä!!\n\n";
+			cout << "ë‹¤ì‹œ ìž…ë ¥í•˜ì„¸ìš”!!\n\n";
 			continue;
 		}
 	}
@@ -234,20 +234,20 @@ void Level4(void)
 {
 	int count = 0;
 	int num;
-	cout<<"¹°À½Ç¥¿¡ ¼ýÀÚ´Â?\n";
-	cout<<"³ª¶ó»ç¶û=0\n";
-	cout<<"Å°º¸µå=1\n";
-	cout<<"Áß¸ð¸®Àå´Ü=2\n";
-	cout<<"À¯ºÎÃÊ¹ä=3\n";
-	cout << "±¤¿î´ëÇÐ±³=?\n";
+	cout<<"ë¬¼ìŒí‘œì— ìˆ«ìžëŠ”?\n";
+	cout<<"ë‚˜ë¼ì‚¬ëž‘=0\n";
+	cout<<"í‚¤ë³´ë“œ=1\n";
+	cout<<"ì¤‘ëª¨ë¦¬ìž¥ë‹¨=2\n";
+	cout<<"ìœ ë¶€ì´ˆë°¥=3\n";
+	cout << "ê´‘ìš´ëŒ€í•™êµ=?\n";
 	while (1) {
-		cout<<"´ä: ";
+		cout<<"ë‹µ: ";
 		cin >> num;
 		getchar();
 		count++;
 		if (count >= 3) {
-			cout << "ÈùÆ®:  ";
-			ifstream r("4¹øÈùÆ®.txt", ios_base::out);
+			cout << "ížŒíŠ¸:  ";
+			ifstream r("4ë²ˆížŒíŠ¸.txt", ios_base::out);
 
 			if (r.is_open() == true)
 			{
@@ -259,11 +259,11 @@ void Level4(void)
 		}
 
 		if (num == 0) {
-			cout<<"Á¤´äÀÔ´Ï´Ù.!!\n\n";
+			cout<<"ì •ë‹µìž…ë‹ˆë‹¤.!!\n\n";
 			break;
 		}
 		else
-			cout<<"´Ù½Ã ÀÔ·ÂÇÏ¼¼¿ä!!\n\n";
+			cout<<"ë‹¤ì‹œ ìž…ë ¥í•˜ì„¸ìš”!!\n\n";
 
 	}
 }
@@ -272,19 +272,19 @@ inline void Level5(void)
 {
 	int count = 0;
 	char c[50];
-	cout<<"³ª´Â ´©±¸ÀÏ±î?\n";
-	cout<< "³ª´Â »ê¿¡ »ìÁö¸¸ ¹Ù´Ù¿¡´Â »ìÁö ¸øÇØ¿ä.\n";
-	cout<<"³ª´Â »ç¹æ ¸ðµç °Í¿¡ Á¸ÀçÇØ¿ä.\n";
-	cout<<"³ª´Â ½½ÇÃ ¶§°¡ ¸¹¾Æ¿ä.\n";
-	cout<<"³ª´Â ¸ðµç °ÍÀ» Å©°Ô ÇØÁà¿ä.\n";
-	cout<<"³ª´Â ´©±¸ÀÏ±î¿ä?\n";
+	cout<<"ë‚˜ëŠ” ëˆ„êµ¬ì¼ê¹Œ?\n";
+	cout<< "ë‚˜ëŠ” ì‚°ì— ì‚´ì§€ë§Œ ë°”ë‹¤ì—ëŠ” ì‚´ì§€ ëª»í•´ìš”.\n";
+	cout<<"ë‚˜ëŠ” ì‚¬ë°© ëª¨ë“  ê²ƒì— ì¡´ìž¬í•´ìš”.\n";
+	cout<<"ë‚˜ëŠ” ìŠ¬í”Œ ë•Œê°€ ë§Žì•„ìš”.\n";
+	cout<<"ë‚˜ëŠ” ëª¨ë“  ê²ƒì„ í¬ê²Œ í•´ì¤˜ìš”.\n";
+	cout<<"ë‚˜ëŠ” ëˆ„êµ¬ì¼ê¹Œìš”?\n";
 	while (1) {
-		cout<<"´ä: ";
+		cout<<"ë‹µ: ";
 		cin >> c;
 		count++;
 		if (count >= 3) {
-			cout << "ÈùÆ®:  ";
-			ifstream r("5¹øÈùÆ®.txt", ios_base::out);
+			cout << "ížŒíŠ¸:  ";
+			ifstream r("5ë²ˆížŒíŠ¸.txt", ios_base::out);
 
 			if (r.is_open() == true)
 			{
@@ -296,33 +296,32 @@ inline void Level5(void)
 		}
 
 		if (c[0] == 't' || c[0] == 'T') {
-			cout<<"Á¤´äÀÔ´Ï´Ù.!!\n\n";
+			cout<<"ì •ë‹µìž…ë‹ˆë‹¤.!!\n\n";
 			break;
 		}
 		else
-			cout<<"´Ù½Ã ÀÔ·ÂÇÏ¼¼¿ä!!\n\n";
+			cout<<"ë‹¤ì‹œ ìž…ë ¥í•˜ì„¸ìš”!!\n\n";
 	}
 }
 
 void Level6(void)
 {
-	FILE *fp = NULL;
 	int count = 0;
 	int num;
-	cout<<"¹°À½Ç¥¿¡ µé¾î°¥ ¼ýÀÚ´Â?\n";
+	cout<<"ë¬¼ìŒí‘œì— ë“¤ì–´ê°ˆ ìˆ«ìžëŠ”?\n";
 	cout<<"Freedom=11\n";
 	cout<<"Lion=7\n";
 	cout<<"Photo=11\n";
 	cout<<"ARt=19\n";
 	cout << "Gentleman=?\n";
 	while (1) {
-		cout<<"´ä: ";
+		cout<<"ë‹µ: ";
 		cin >> num;
 		getchar();
 		count++;
 		if (count >= 3) {
-			cout << "ÈùÆ®:  ";
-			ifstream r("6¹øÈùÆ®.txt", ios_base::out);
+			cout << "ížŒíŠ¸:  ";
+			ifstream r("6ë²ˆížŒíŠ¸.txt", ios_base::out);
 
 			if (r.is_open() == true)
 			{
@@ -334,11 +333,11 @@ void Level6(void)
 		}
 
 		if (num == 15) {
-			cout << "Á¤´äÀÔ´Ï´Ù.!!\n\n";
+			cout << "ì •ë‹µìž…ë‹ˆë‹¤.!!\n\n";
 			break;
 		}
 		else {
-			cout<<"´Ù½Ã ÀÔ·ÂÇÏ¼¼¿ä!!\n\n";
+			cout<<"ë‹¤ì‹œ ìž…ë ¥í•˜ì„¸ìš”!!\n\n";
 			continue;
 		}
 	}
@@ -348,19 +347,19 @@ void Level7(void)
 {
 	int count = 0;
 	int num;
-	cout<<"ºñ¹Ð ÀÛÀüÀ» ¼öÇà ÁßÀÎ ½ºÆÄÀÌ µÎ¿¬ÀÌ´Â ºñ¹Ð Àå¼Ò¿¡\n";
-	cout<<"ÀÚ½ÅÀÇ ÆÀ¿øµé¸¸ ¾Ë¾Æº¼ ¼ö ÀÖ°Ô 8ÀÚ¸® ÆÐ½º¿öµå¸¦ ¼³Á¤ÇØ³õ¾Ò´Ù.\n";
-	cout<<"ÆÐ½º¿öµå´Â ¹«¾ùÀÏ±î?\n";
+	cout<<"ë¹„ë°€ ìž‘ì „ì„ ìˆ˜í–‰ ì¤‘ì¸ ìŠ¤íŒŒì´ ë‘ì—°ì´ëŠ” ë¹„ë°€ ìž¥ì†Œì—\n";
+	cout<<"ìžì‹ ì˜ íŒ€ì›ë“¤ë§Œ ì•Œì•„ë³¼ ìˆ˜ ìžˆê²Œ 8ìžë¦¬ íŒ¨ìŠ¤ì›Œë“œë¥¼ ì„¤ì •í•´ë†“ì•˜ë‹¤.\n";
+	cout<<"íŒ¨ìŠ¤ì›Œë“œëŠ” ë¬´ì—‡ì¼ê¹Œ?\n";
 	cout << "THIS WILL BE OUR SECRET\n";
 	cout << "TIHS WLIL BE OUR SCERTE\n";
 	while (1) {
-		cout<<"´ä: ";
+		cout<<"ë‹µ: ";
 		cin >> num;
 		getchar();
 		count++;
 		if (count >= 3) {
-			cout << "ÈùÆ®:  ";
-			ifstream r("7¹øÈùÆ®.txt", ios_base::out);
+			cout << "ížŒíŠ¸:  ";
+			ifstream r("7ë²ˆížŒíŠ¸.txt", ios_base::out);
 
 			if (r.is_open() == true)
 			{
@@ -372,11 +371,11 @@ void Level7(void)
 		}
 
 		if (num == 91912399) {
-			cout<<"Á¤´äÀÔ´Ï´Ù.!!\n\n";
+			cout<<"ì •ë‹µìž…ë‹ˆë‹¤.!!\n\n";
 			break;
 		}
 		else {
-			cout<<"´Ù½Ã ÀÔ·ÂÇÏ¼¼¿ä!!\n\n";
+			cout<<"ë‹¤ì‹œ ìž…ë ¥í•˜ì„¸ìš”!!\n\n";
 			continue;
 		}
 	}
@@ -386,18 +385,18 @@ void Level8(void)
 {
 	int count = 0;char c1[50] = "house";
 	char c2[50];
-	cout << "¹°À½Ç¥¿¡ µé¾î°¥ °ÍÀº? (´Ü, ¼Ò¹®ÀÚ·Î ÀÛ¼ºÇÏ½Ã¿À)\n";
-	cout<<"33 92 75 83 ¡æ ring\n";
-	cout<<"84 13 33 23 ¡æ hero\n";
-	cout<<"32 23 43 71 81 ¡æ ?\n";
+	cout << "ë¬¼ìŒí‘œì— ë“¤ì–´ê°ˆ ê²ƒì€? (ë‹¨, ì†Œë¬¸ìžë¡œ ìž‘ì„±í•˜ì‹œì˜¤)\n";
+	cout<<"33 92 75 83 â†’ ring\n";
+	cout<<"84 13 33 23 â†’ hero\n";
+	cout<<"32 23 43 71 81 â†’ ?\n";
 	while (1) {
-		cout<<"´ä: ";
+		cout<<"ë‹µ: ";
 		cin >> c2;
 
 		count++;
 		if (count >= 3) {
-			cout << "ÈùÆ®:  ";
-			ifstream r("8¹øÈùÆ®.txt", ios_base::out);
+			cout << "ížŒíŠ¸:  ";
+			ifstream r("8ë²ˆížŒíŠ¸.txt", ios_base::out);
 
 			if (r.is_open() == true)
 			{
@@ -409,11 +408,11 @@ void Level8(void)
 		}
 
 		if (strcmp(c1, c2) == 0) {
-			cout<<"Á¤´äÀÔ´Ï´Ù.!!\n\n";
+			cout<<"ì •ë‹µìž…ë‹ˆë‹¤.!!\n\n";
 			break;
 		}
 		else {
-			cout<<"´Ù½Ã ÀÔ·ÂÇÏ¼¼¿ä!!\n\n";
+			cout<<"ë‹¤ì‹œ ìž…ë ¥í•˜ì„¸ìš”!!\n\n";
 			continue;
 		}
 	}
@@ -424,17 +423,17 @@ void Level9(void)
 {
 	int count = 0;
 	int num;
-	cout<<"¹°À½Ç¥¿¡ µé¾î°¥ °ÍÀº?\n";
+	cout<<"ë¬¼ìŒí‘œì— ë“¤ì–´ê°ˆ ê²ƒì€?\n";
 	cout<<"TV=1   KO=3\n";
 	cout<<"DJ=5   ET=?\n";
 	while (1) {
-		cout<<"´ä: ";
+		cout<<"ë‹µ: ";
 		cin >> num;
 		getchar();
 		count++;
 		if (count >= 3) {
-			cout << "ÈùÆ®:  ";
-			ifstream r("9¹øÈùÆ®.txt", ios_base::out);
+			cout << "ížŒíŠ¸:  ";
+			ifstream r("9ë²ˆížŒíŠ¸.txt", ios_base::out);
 
 			if (r.is_open() == true)
 			{
@@ -446,11 +445,11 @@ void Level9(void)
 		}
 
 		if (num == 14) {
-			cout<<"Á¤´äÀÔ´Ï´Ù.!!\n\n";
+			cout<<"ì •ë‹µìž…ë‹ˆë‹¤.!!\n\n";
 			break;
 		}
 		else {
-			cout<<"´Ù½Ã ÀÔ·ÂÇÏ¼¼¿ä!!\n\n";
+			cout<<"ë‹¤ì‹œ ìž…ë ¥í•˜ì„¸ìš”!!\n\n";
 			continue;
 		}
 	}
@@ -460,18 +459,18 @@ void Level10(void)
 {
 	int count = 0;
 	int num;
-	cout<<"¹°À½Ç¥¿¡ µé¾î°¥ ¼ýÀÚ´Â?\n";
+	cout<<"ë¬¼ìŒí‘œì— ë“¤ì–´ê°ˆ ìˆ«ìžëŠ”?\n";
 	cout<<"2  4  6  30 32 34 36 40 42 44\n";
 	cout<<"46 50 52 54 56 60 62 64 66 ?\n";
 
 	while (1) {
-		cout << "´ä: ";
+		cout << "ë‹µ: ";
 		cin >> num;
 		getchar();
 		count++;
 		if (count >= 3) {
-			cout << "ÈùÆ®:  ";
-			ifstream r("10¹øÈùÆ®.txt", ios_base::out);
+			cout << "ížŒíŠ¸:  ";
+			ifstream r("10ë²ˆížŒíŠ¸.txt", ios_base::out);
 
 			if (r.is_open() == true)
 			{
@@ -483,11 +482,11 @@ void Level10(void)
 		}
 
 		if (num == 1000) {
-			cout<<"Á¤´äÀÔ´Ï´Ù.!!\n\n";
+			cout<<"ì •ë‹µìž…ë‹ˆë‹¤.!!\n\n";
 			break;
 		}
 		else
-			cout<<"´Ù½Ã ÀÔ·ÂÇÏ¼¼¿ä!!\n\n";
+			cout<<"ë‹¤ì‹œ ìž…ë ¥í•˜ì„¸ìš”!!\n\n";
 	}
 }
 
@@ -496,14 +495,14 @@ void Boss(void)
 	char c[20];
 
 	while (1) {
-		cout<<"¿ì¸®³ª¶óÀÇ ¼öµµ´Â? \n";
+		cout<<"ìš°ë¦¬ë‚˜ë¼ì˜ ìˆ˜ë„ëŠ”? \n";
 		cin >> c;
-		if (strcmp(c, "¼­¿ï") == 0) {
-			cout<<"Á¤´äÀÔ´Ï´Ù. ¸ðµÎ Å¬¸®¾îÇÏ¼Ì½À´Ï´Ù!!\n\n´ç½ÅÀº ÁøÁ¤ÇÑ ³ú¼½³²!!!\n\n";
+		if (strcmp(c, "ì„œìš¸") == 0) {
+			cout<<"ì •ë‹µìž…ë‹ˆë‹¤. ëª¨ë‘ í´ë¦¬ì–´í•˜ì…¨ìŠµë‹ˆë‹¤!!\n\në‹¹ì‹ ì€ ì§„ì •í•œ ë‡Œì„¹ë‚¨!!!\n\n";
 			break;
 		}
 		else {
-			cout<<"´Ù½Ã ÀÔ·ÂÇÏ¼¼¿ä!!\n\n";
+			cout<<"ë‹¤ì‹œ ìž…ë ¥í•˜ì„¸ìš”!!\n\n";
 			continue;
 		}
 	}
